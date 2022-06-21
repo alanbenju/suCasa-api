@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import attendeesRoutes from './routes/attendees.route'
 import presentationRoutes from './routes/presentations.route'
 import connectToDB from './db'
+import 'dotenv/config'
 
 const app = express()
 

@@ -3,7 +3,6 @@ services:
     sucasa-api:
         container_name: sucasa-api
         build: .
-        working_dir: /sucasa-api
         ports:
             - '3001:3001'
         links:
