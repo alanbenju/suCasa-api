@@ -1,0 +1,33 @@
+version: '3'
+services:
+    sucasa-api:
+        container_name: sucasa-api
+        build: .
+        working_dir: /sucasa-api
+        ports:
+            - '3001:3001'
+        links:
+            - sucasa-mongo
+        environment:
+            - PORT=3001
+            - MONGO_URL=mongodb://sucasa-mongo/db
+        volumes:
+            - .:/sucasa-api
+        networks:
+            - app-network
+          
+
+    sucasa-mongo:
+        container_name: sucasa-mongo
+        image: mongo
+        ports:
+            - '27117:27017'
+        networks:
+            - app-network
+        
+    
+    
+networks:
+    app-network:
+        driver: bridge
+          
