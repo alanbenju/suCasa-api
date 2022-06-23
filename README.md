@@ -26,6 +26,7 @@ This backend was developed in a short amount of time, in consecuence it's incomp
 - Running tests and eslint before pushing to repository
 - Add endpoint documentations like Swagger
 - Add user+password to the database (shh)
+- CORS for sucasa domain
 
 ## Test environment
 Deployed to AWS ec2 instance, running with nginx as reverse proxy
